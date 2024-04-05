@@ -1,9 +1,15 @@
-import net.gamatron.music.Tracks
-import org.opengrabeso.airframe.surface.Surface
+/**
+ * Doc of Test
+ * */
+class Test
 
 object Test {
   def main(args: Array[String]): Unit = {
-    val surface = Surface.of[Tracks]
-    println(surface.docString)
+    val docString = Doc.of[Main]
+    println(docString)
+    val docStringTest = Doc.of[Test]
+    println(docStringTest)
+
+    if (docString.isEmpty || docStringTest.isEmpty) System.exit(1)
   }
 }
